@@ -1,0 +1,42 @@
+package selenium;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class selenium {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+//Launch chrome web browser
+		System.setProperty("webdriver.chrome.driver", "C:\\Driver File\\All driver folder\\chromedriver-win64 (2)\\chromedriver-win64\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.google.com/");
+		
+		
+		//capture ttle of webpage and print
+		
+		String title = driver.getTitle();
+		
+		
+	 System.out.println("Page Title :" + title);
+	 
+	 
+	 //capture url of the webpage 
+	 
+	 System.out.println("URL:" + driver.getCurrentUrl());
+	 
+	 
+	 //capture page source
+	  System.out.println("page source:" + driver.getPageSource());
+		
+		Thread.sleep(5000);
+		
+		driver.quit();
+		
+		
+		
+	}
+
+}
